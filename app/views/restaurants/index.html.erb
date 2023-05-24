@@ -1,0 +1,16 @@
+
+
+<div class="container my-3 d-flex flex-column">
+  <div class="row align-items-center">
+    <div class="col">
+      <h1>All of our Restaurants</h1>
+    </div>
+    <div class="col-auto">
+      <%= link_to "Add a restaurant", new_restaurant_path, class: "shadow__btn my-3"%> 
+    </div>
+  <% @restaurants.each do |restaurant| %>
+    <ul style="list-group">
+      <li class="list-group-item"><%= link_to restaurant.name, restaurant_path(restaurant) %></li>
+    </ul>
+  <% end %>
+</div>
